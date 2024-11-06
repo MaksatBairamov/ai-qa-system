@@ -11,7 +11,6 @@ def topic_modeling(documents):
     
     return topics
 
-# Тестування з парою прикладів
-documents = ["Це приклад документу номер один", "І тут у нас документ номер два"]
+documents = ["Document example one", "Document example two"]
 topics = topic_modeling(documents)
-print("Видобуті теми:", topics)
+print("Extracted topics:", topics)
