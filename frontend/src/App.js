@@ -4,7 +4,6 @@ function App() {
   const [question, setQuestion] = useState('');
   const [response, setResponse] = useState('');
 
-  // Хендлер для відправки запитання
   const handleAskQuestion = async () => {
     try {
       const res = await fetch('http://localhost:3000/ask', {
@@ -15,7 +14,7 @@ function App() {
       const data = await res.text();
       setResponse(data);
     } catch (error) {
-      console.error('Упс, щось пішло не так!', error);
+      console.error('Error:', error);
     }
   };
 
@@ -26,13 +25,13 @@ function App() {
         type="text"
         value={question}
         onChange={(e) => setQuestion(e.target.value)}
-        placeholder="Спробуй задати запитання"
+        placeholder="Ask a question"
         style={{ padding: '10px', marginRight: '10px' }}
       />
       <button onClick={handleAskQuestion} style={{ padding: '10px' }}>
-        Запитати
+        Ask
       </button>
-      <p style={{ marginTop: '20px' }}>Відповідь: {response}</p>
+      <p style={{ marginTop: '20px' }}>Response: {response}</p>
     </div>
   );
 }
