@@ -1,7 +1,7 @@
 # AI-Enhanced Document QA System 🤖
 
 ## Description
-A system for document uploading and question answering that leverages AI. Made by me — still learning AI, but getting there! 🙃
+A system for document uploading and question answering that leverages AI.
 
 ## Installation
 
