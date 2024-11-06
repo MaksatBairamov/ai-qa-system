@@ -14,7 +14,7 @@ app.post('/upload', upload.single('document'), (req, res) => {
     return res.status(400).send('тю, де файл?');
   }
   const fileBuffer = req.file.buffer;
-  res.send('Документ завантажено успішно.');
+  res.send('success.');
 });
 
 // Маршрут для відповіді на запитання
